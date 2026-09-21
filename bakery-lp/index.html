@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakery こもれび | 家族の毎日に寄り添うパン屋さん</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ===================================================
+       ① ヘッダー：店名ロゴとページ内ナビゲーション
+  =================================================== -->
+  <header class="header">
+    <div class="header-inner">
+      <!-- サイトの最上位見出し・ロゴ -->
+      <h1 class="logo">
+        <a href="#">Bakery こもれび</a>
+      </h1>
+
+      <!-- サイト内ナビゲーション -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about">こだわり</a></li>
+          <li class="nav-item"><a href="#signature">看板商品</a></li>
+          <li class="nav-item"><a href="#menu">おすすめ商品</a></li>
+          <li class="nav-item"><a href="#shop-info">店舗情報</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================================================
+       メインコンテンツ（ページ固有の主要内容を囲む）
+  =================================================== -->
+  <main>
+    <!-- ===================================================
+         ② ファーストビュー（ヒーローセクション）
+    =================================================== -->
+    <section class="hero">
+      <div class="hero-inner">
+        <!-- 看板商品の写真 -->
+        <div class="hero-image-wrapper">
+          <img src="images/hero-croissant.jpg" alt="焼きたての発酵バタークロワッサン" class="hero-image">
+        </div>
+
+        <!-- キャッチコピーエリア -->
+        <div class="hero-content">
+          <p class="hero-subcopy">住宅街の小さな隠れ家ベーカリー</p>
+          <h2 class="hero-title">家族の毎日に、<br>焼きたての香りを。</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         ③ お店のこだわり（Aboutセクション）
+    =================================================== -->
+    <section id="about" class="about">
+      <div class="about-inner">
+        <!-- セクションの見出し -->
+        <h2 class="section-title">Bakery こもれび について</h2>
+        
+        <!-- お店の想い（リード文） -->
+        <p class="about-lead">
+          ふんわり広がる小麦の香りと、カリッとした焼き立ての音。<br>
+          Bakery こもれび は、住宅街の片隅で、ご家族みんなが笑顔になれるパンを毎朝心を込めて焼いています。
+        </p>
+
+        <!-- 3つのこだわりカード -->
+        <div class="about-cards">
+          <!-- こだわり1 -->
+          <article class="about-card">
+            <h3 class="about-card-title">安心の国産小麦100%</h3>
+            <p class="about-card-text">
+              保存料を使わず、小さなお子様からお年寄りまで安心してお召し上がりいただけます。
+            </p>
+          </article>
+
+          <!-- こだわり2 -->
+          <article class="about-card">
+            <h3 class="about-card-title">家族で選べる豊富なパン</h3>
+            <p class="about-card-text">
+              朝食の定番食パンからおやつパン、具だくさんのお惣菜パンまで、みんなの「お気に入り」が見つかります。
+            </p>
+          </article>
+
+          <!-- こだわり3 -->
+          <article class="about-card">
+            <h3 class="about-card-title">毎日ふらっと立ち寄れる場所</h3>
+            <p class="about-card-text">
+              お散歩やお買い物のついでに気軽に立ち寄れる、温かく親しみやすいお店づくりを大切にしています。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         ④ 看板商品（Signatureセクション）
+    =================================================== -->
+    <section id="signature" class="signature">
+      <div class="signature-inner">
+        <!-- セクションの見出し -->
+        <h2 class="section-title">自慢の看板商品</h2>
+
+        <article class="signature-card">
+          <!-- 商品写真 -->
+          <div class="signature-image-wrapper">
+            <img src="images/hero-croissant.jpg" alt="発酵バターの贅沢クロワッサン" class="signature-image">
+          </div>
+
+          <!-- 商品情報 -->
+          <div class="signature-body">
+            <h3 class="signature-name">発酵バターの贅沢クロワッサン</h3>
+            <p class="signature-price">
+              <span class="price-num">280</span>円<span class="price-tax">（税込）</span>
+            </p>
+            <p class="signature-desc">
+              フランス産発酵バターを幾重にも折り込み、外はサクッと軽やか、中はじゅわっと豊かなバターの香りが広がります。毎朝の焼き上がり時間に合わせて焼き立てをご用意しています。
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         ⑤ おすすめ商品（Menuセクション）
+    =================================================== -->
+    <section id="menu" class="menu">
+      <div class="menu-inner">
+        <!-- セクションの見出し -->
+        <h2 class="section-title">おすすめのパン</h2>
+
+        <!-- 3点カードリスト -->
+        <div class="menu-list">
+          <!-- 商品1：食パン -->
+          <article class="menu-card">
+            <div class="menu-card-image-wrapper">
+              <img src="images/bread-shokupan.jpg" alt="もっちり山型食パン" class="menu-card-image">
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">もっちり山型食パン</h3>
+              <p class="menu-card-price">
+                <span class="price-num">340</span>円<span class="price-tax">（税込）</span>
+              </p>
+              <p class="menu-card-desc">
+                トーストすると表面はカリッ、中はもっちり。毎朝の食卓に寄り添う、飽きのこない定番食パンです。
+              </p>
+            </div>
+          </article>
+
+          <!-- 商品2：カレーパン -->
+          <article class="menu-card">
+            <div class="menu-card-image-wrapper">
+              <img src="images/curry-pan.jpg" alt="自家製カレーパン" class="menu-card-image">
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">自家製カレーパン</h3>
+              <p class="menu-card-price">
+                <span class="price-num">260</span>円<span class="price-tax">（税込）</span>
+              </p>
+              <p class="menu-card-desc">
+                香味野菜とスパイスをじっくり煮込んだ自家製カレーを包み、ザクザクの衣で香ばしく揚げました。
+              </p>
+            </div>
+          </article>
+
+          <!-- 商品3：フルーツデニッシュ -->
+          <article class="menu-card">
+            <div class="menu-card-image-wrapper">
+              <img src="images/fruit-danish.jpg" alt="季節のフルーツデニッシュ" class="menu-card-image">
+            </div>
+            <div class="menu-card-body">
+              <h3 class="menu-card-name">季節のフルーツデニッシュ</h3>
+              <p class="menu-card-price">
+                <span class="price-num">380</span>円<span class="price-tax">（税込）</span>
+              </p>
+              <p class="menu-card-desc">
+                サクサクのデニッシュ生地に、濃厚カスタードと旬のみずみずしい果物をたっぷり乗せました。
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         ⑥ 店舗情報・アクセス（Shop Infoセクション）
+    =================================================== -->
+    <section id="shop-info" class="shop-info">
+      <div class="shop-info-inner">
+        <h2 class="section-title">店舗情報・アクセス</h2>
+
+        <!-- 店舗データ（定義リスト） -->
+        <dl class="shop-data-list">
+          <div class="shop-data-row">
+            <dt class="shop-data-term">店名</dt>
+            <dd class="shop-data-desc">Bakery こもれび（ベーカリー こもれび）</dd>
+          </div>
+
+          <div class="shop-data-row">
+            <dt class="shop-data-term">住所</dt>
+            <dd class="shop-data-desc">〒000-0000 ○○県○○市緑が丘 3-12-5（※架空の住所です）</dd>
+          </div>
+
+          <div class="shop-data-row">
+            <dt class="shop-data-term">営業時間</dt>
+            <dd class="shop-data-desc">8:00 〜 18:00（パンがなくなり次第終了）</dd>
+          </div>
+
+          <div class="shop-data-row">
+            <dt class="shop-data-term">定休日</dt>
+            <dd class="shop-data-desc">毎週月曜日・火曜日</dd>
+          </div>
+
+          <div class="shop-data-row">
+            <dt class="shop-data-term">アクセス</dt>
+            <dd class="shop-data-desc">緑が丘駅 北口より徒歩7分</dd>
+          </div>
+
+          <div class="shop-data-row">
+            <dt class="shop-data-term">お支払い方法</dt>
+            <dd class="shop-data-desc">現金・各種クレジットカード・交通系IC・QRコード決済</dd>
+          </div>
+        </dl>
+
+        <!-- ポートフォリオ用注記 -->
+        <p class="shop-note">
+          ※本サイトはWeb制作学習およびポートフォリオ用の架空のサイトです。実在する店舗・団体とは関係ありません。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================
+       ⑦ フッター：コピーライト
+  =================================================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="copyright">
+        <small>&copy; 2026 Bakery Komorebi. All Rights Reserved.</small>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

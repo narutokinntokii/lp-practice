@@ -1,0 +1,437 @@
+@charset "UTF-8";
+
+/* ===================================================
+   Bakery こもれび - メインスタイルシート
+   詳細は SPEC.md を参照
+=================================================== */
+
+:root {
+  --color-bg: #fcfbf9;
+  --color-primary: #a05a2c;
+  --color-accent: #d97736;
+  --color-text: #3e3228;
+  --color-muted: #7c6e65;
+  --color-white: #ffffff;
+  --color-border: #eadfd5;
+}
+
+/* ===================================================
+   1. リセットCSS・ボックスモデルの設定
+=================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================================================
+   2. 基本スタイル（画像・フォント・背景色）
+=================================================== */
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+  line-height: 1.8;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 画像が親要素からはみ出さないようにする超重要設定 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: bottom;
+}
+
+/* リンクの下線や色をリセット */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* リストの黒丸を削除 */
+ul {
+  list-style: none;
+}
+
+/* ===================================================
+   3. 共通レイアウト（最大幅と中央寄せ）
+=================================================== */
+.header-inner,
+.hero-inner,
+.about-inner,
+.signature-inner,
+.menu-inner,
+.shop-info-inner,
+.footer-inner {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ===================================================
+   4. ヘッダーのスタイリング
+=================================================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  padding: 12px 0;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;         /* スマホでは縦2段（ロゴ上・メニュー下） */
+  align-items: center;            /* 中央揃え */
+  gap: 8px;
+}
+
+.logo {
+  font-size: 1.25rem;             /* 20px相当 */
+  font-weight: bold;
+  color: var(--color-primary);    /* 香ばしいブラウン */
+}
+
+/* メニュー項目を横並びにする */
+.nav-list {
+  display: flex;
+  gap: 16px;                      /* スマホではメニュー間隔を狭めに */
+}
+
+.nav-item a {
+  font-size: 0.8rem;              /* スマホでは小さめにして1行に収める */
+  color: var(--color-muted);      /* 落ち着いたグレーブラウン */
+  font-weight: 500;
+  transition: color 0.2s ease;    /* ホバー時の色変化を滑らかに */
+}
+
+.nav-item a:hover {
+  color: var(--color-accent);     /* マウスを乗せるとオレンジ色に */
+}
+
+/* ===================================================
+   5. ファーストビュー（ヒーローエリア）のスタイリング
+=================================================== */
+.hero {
+  padding: 40px 0 60px;           /* 上下にゆったりとした余白 */
+}
+
+.hero-image-wrapper {
+  margin-bottom: 24px;            /* 写真と文字の間の隙間 */
+  border-radius: 12px;            /* 角を丸くする */
+  overflow: hidden;               /* はみ出した角を切り抜く */
+  box-shadow: 0 4px 20px rgba(62, 50, 40, 0.08); /* 柔らかな影 */
+}
+
+.hero-content {
+  text-align: center;             /* キャッチコピーを中央寄せ */
+}
+
+.hero-subcopy {
+  font-size: 0.95rem;
+  color: var(--color-accent);     /* アクセントのオレンジ色 */
+  font-weight: bold;
+  letter-spacing: 0.05em;         /* 文字の間隔を少し広げて上品に */
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  font-size: 1.75rem;             /* 大きな見出し文字 */
+  line-height: 1.5;
+  color: var(--color-primary);    /* 香ばしいブラウン */
+  font-weight: bold;
+}
+
+/* ===================================================
+   6. 共通セクション見出し
+=================================================== */
+.section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 32px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+/* 見出しの下におしゃれな短い下線をつける */
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 3px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* ===================================================
+   7. お店のこだわり（About）
+=================================================== */
+.about {
+  padding: 60px 0;
+}
+
+.about-lead {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+.about-cards {
+  display: flex;
+  flex-direction: column;         /* スマホ基準で縦に並べる */
+  gap: 20px;
+}
+
+.about-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 24px 20px;
+  box-shadow: 0 2px 10px rgba(62, 50, 40, 0.04);
+}
+
+.about-card-title {
+  font-size: 1.15rem;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.about-card-text {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+/* ===================================================
+   8. 自慢の看板商品（Signature）
+=================================================== */
+.signature {
+  padding: 60px 0;
+}
+
+.signature-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(62, 50, 40, 0.06);
+}
+
+.signature-body {
+  padding: 24px 20px;
+}
+
+.signature-name {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+/* 価格のスタイリング */
+.signature-price {
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.price-num {
+  font-size: 1.6rem;              /* 数字を大きく */
+  font-weight: bold;
+  color: var(--color-accent);     /* オレンジ色でアピール */
+  margin-right: 2px;
+}
+
+.price-tax {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-left: 4px;
+}
+
+.signature-desc {
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+/* ===================================================
+   9. おすすめ商品（Menu）
+=================================================== */
+.menu {
+  padding: 60px 0;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.menu-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(62, 50, 40, 0.04);
+}
+
+/* 商品写真の高さを揃えて綺麗にトリミングするテクニック */
+.menu-card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;              /* 縦横比を崩さず枠いっぱいに収める */
+}
+
+.menu-card-body {
+  padding: 20px;
+}
+
+.menu-card-name {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.menu-card-price {
+  margin-bottom: 12px;
+}
+
+.menu-card-desc {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* ===================================================
+   10. 店舗情報・アクセス（Shop Info）
+=================================================== */
+.shop-info {
+  padding: 60px 0;
+}
+
+.shop-data-list {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(62, 50, 40, 0.04);
+  margin-bottom: 24px;
+}
+
+.shop-data-row {
+  display: flex;
+  flex-direction: column;         /* スマホでは「見出し」の下に「内容」 */
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border);
+  gap: 4px;
+}
+
+.shop-data-row:last-child {
+  border-bottom: none;            /* 一番下の行は下線を消す */
+}
+
+.shop-data-term {
+  font-weight: bold;
+  color: var(--color-primary);
+  font-size: 0.95rem;
+}
+
+.shop-data-desc {
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.shop-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+/* ===================================================
+   11. フッター（Footer）
+=================================================== */
+.footer {
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border);
+  padding: 30px 0;
+  margin-top: 40px;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* スムーズスクロールの設定 */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* ===================================================
+   12. レスポンシブ対応（タブレット・PC向け：768px以上）
+=================================================== */
+@media (min-width: 768px) {
+  /* ヘッダーをPC用レイアウトに切り替え（横並び） */
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .nav-list {
+    gap: 24px;
+  }
+  .nav-item a {
+    font-size: 0.9rem;
+  }
+
+  /* こだわりカードを横に3分割して並べる */
+  .about-cards {
+    flex-direction: row;
+  }
+  .about-card {
+    flex: 1;                      /* 3つのカードを均等な幅にする */
+  }
+
+  /* 看板商品を「左に写真・右に説明文」の2カラムにする */
+  .signature-card {
+    display: flex;
+    align-items: center;
+  }
+  .signature-image-wrapper {
+    flex: 1;
+    max-width: 50%;
+  }
+  .signature-body {
+    flex: 1;
+    padding: 32px;
+  }
+
+  /* おすすめ商品カードを横に3分割して並べる */
+  .menu-list {
+    flex-direction: row;
+  }
+  .menu-card {
+    flex: 1;                      /* 3つのカードを均等な幅にする */
+  }
+  .menu-card-image {
+    height: 180px;                /* 横並び時は高さを程よく調整 */
+  }
+
+  /* 店舗情報の「項目名」と「内容」を横並びにする */
+  .shop-data-row {
+    flex-direction: row;
+    align-items: baseline;
+  }
+  .shop-data-term {
+    width: 140px;                 /* 項目名の幅を固定して綺麗に揃える */
+    flex-shrink: 0;
+  }
+}
