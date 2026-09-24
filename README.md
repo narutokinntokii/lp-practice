@@ -14,14 +14,17 @@ HTML・CSSを学びながら、複数のランディングページを制作す�
 - **コンセプト**: 「家族の毎日に寄り添う」パン屋さんのランディングページ
 - **使用技術**: HTML5（セマンティックマークアップ）、CSS3（Flexbox / CSS変数 / レスポンシブ対応）
 - **フォルダ**: `bakery-lp/`
+- **GitHub Pages**: [公開ページ](https://narutokinntokii.github.io/lp-practice/bakery-lp/)
 
 ### 第2作目：NEXUS FITNESS
 - **コンセプト**: 「最新鋭の設備で、理想の身体を最短で。」フィットネスジムのランディングページ
 - **使用技術**: HTML5、CSS3（Grid / Flexbox / CSS変数 / レスポンシブ対応）
 - **フォルダ**: `fitness-gym-lp/`
+- **GitHub Pages**: [公開ページ](https://narutokinntokii.github.io/lp-practice/fitness-gym-lp/)
 
 ### 第3作目：NEXUS FITNESS STORY LP
 - **コンセプト**: 「スクロールするほど、理想の身体に近づいていく。」NEXUS FITNESSの発展版ランディングページ
 - **使用技術**: HTML5、CSS3、JavaScript（IntersectionObserver / requestAnimationFrame / スクロール連動表現）
 - **アクセシビリティ**: `prefers-reduced-motion`、JavaScript無効時の通常表示、レスポンシブ対応
 - **フォルダ**: `nexus-fitness-story-lp/`
+- **GitHub Pages**: [公開ページ](https://narutokinntokii.github.io/lp-practice/nexus-fitness-story-lp/)
