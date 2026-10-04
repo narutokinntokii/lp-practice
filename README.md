@@ -28,3 +28,13 @@ HTML・CSSを学びながら、複数のランディングページを制作す�
 - **アクセシビリティ**: `prefers-reduced-motion`、JavaScript無効時の通常表示、レスポンシブ対応
 - **フォルダ**: `nexus-fitness-story-lp/`
 - **GitHub Pages**: [公開ページ](https://narutokinntokii.github.io/lp-practice/nexus-fitness-story-lp/)
+
+### 第4作目：為替日和
+- **コンセプト**: 「世界のお金を、暮らしの目線で。」実データを取得する為替チェックLP
+- **使用技術**: HTML5、CSS3、JavaScript（Fetch API / SVGグラフ / レスポンシブ対応）
+- **データ**: Frankfurter API経由のECB日次参考レート。主要4通貨、円→外貨 / 外貨→円のタブ切替、1か月 / 3か月 / 1年の推移グラフ
+- **フォルダ**: `forex-check-lp/`
+- **確認方法**: [index.html](forex-check-lp/index.html) をブラウザで開く。詳しくは [README](forex-check-lp/README.md)
+- **GitHub Pages**: [公開ページ](https://narutokinntokii.github.io/lp-practice/forex-check-lp/)
+
+- **操作**: 円は1,000円刻み、外貨は1通貨単位で増減。方向ごとの入力金額を保持
